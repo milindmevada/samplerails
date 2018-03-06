@@ -14,7 +14,7 @@ class WelcomeController < ApplicationController
         else
             {status: 422, value: "bad_value"}
         end
-    render status: result[:status], json: { data: result[:value] }.to_json
+    render json: { status: result[:status],  data: result[:value] }.to_json
 end
 
 end
